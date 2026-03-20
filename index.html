@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lumark — Local-First Markdown Note-Taking App</title>
+    <meta name="description" content="A fast, local-first Markdown note-taking app. Your notes stay on your machine. Built with Tauri." />
+  </head>
+  <body>
+    <!-- Hero -->
+    <section id="hero" class="bg-primary text-white text-center">
+      <div class="container py-5">
+        <img src="/logo.png" alt="Lumark logo" width="80" height="80" class="mb-3" />
+        <h1 class="display-3 fw-bold">Lumark</h1>
+        <p class="lead mb-4">A fast, local-first Markdown note-taking app.<br />Your notes stay on your machine.</p>
+        <div class="d-flex justify-content-center gap-3 flex-wrap">
+          <a href="https://github.com/AlbertArakelyan/Lumark" class="btn btn-light btn-lg d-inline-flex align-items-center gap-2" target="_blank" rel="noopener">
+            <svg width="20" height="20" aria-hidden="true"><use href="/icons.svg#github-icon"/></svg>
+            GitHub
+          </a>
+          <a href="https://github.com/AlbertArakelyan/Lumark/releases/latest" class="btn btn-outline-light btn-lg d-inline-flex align-items-center gap-2" target="_blank" rel="noopener">
+            <i class="bi bi-download"></i>
+            Download
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Wave: primary → white -->
+    <div class="wave-divider" style="background:#fff">
+      <svg viewBox="0 0 1440 100" preserveAspectRatio="none">
+        <path fill="#158cba" d="M0,0 C360,100 1080,0 1440,80 L1440,0 L0,0 Z"/>
+      </svg>
+    </div>
+
+    <!-- Highlights -->
+    <section id="highlights" class="bg-white py-5">
+      <div class="container">
+        <div class="highlight-block">
+          <div class="row">
+            <div class="col-lg-8">
+              <h3>Amazing</h3>
+              <p>Your notes are stored locally on your device with no data collection whatsoever. Work across Windows, macOS, and Linux with a powerful split editor that lets you write and preview side by side.</p>
+            </div>
+          </div>
+        </div>
+        <div class="highlight-block align-right">
+          <div class="row justify-content-end">
+            <div class="col-lg-8">
+              <h3>Elegant</h3>
+              <p>A minimalist two-column layout keeps everything you need within reach — your file tree on one side, your editor on the other — so you can write without distractions.</p>
+            </div>
+          </div>
+        </div>
+        <div class="highlight-block">
+          <div class="row">
+            <div class="col-lg-8">
+              <h3>Efficient</h3>
+              <p>Built on Tauri instead of Electron, Lumark delivers noticeably faster startup times, lower memory usage, and a smaller install footprint.</p>
+            </div>
+          </div>
+        </div>
+        <div class="highlight-block align-right">
+          <div class="row justify-content-end">
+            <div class="col-lg-8">
+              <h3>Simple</h3>
+              <p>One tool, one purpose — taking notes in Markdown. No bloated feature lists, no unnecessary complexity. Just open it and start writing.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section id="features" class="bg-white py-5">
+      <div class="container">
+        <h2 class="text-center display-6 fw-bold mb-5">Why Lumark?</h2>
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-4">
+            <div class="text-center p-4">
+              <i class="bi bi-shield-lock feature-icon"></i>
+              <h3 class="h5 fw-bold mt-3">Local-First</h3>
+              <p class="text-muted">Notes live on your machine. No cloud, no accounts, complete privacy.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="text-center p-4">
+              <i class="bi bi-laptop feature-icon"></i>
+              <h3 class="h5 fw-bold mt-3">Cross-Platform</h3>
+              <p class="text-muted">Available on Windows, macOS, and Linux.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="text-center p-4">
+              <i class="bi bi-layout-sidebar feature-icon"></i>
+              <h3 class="h5 fw-bold mt-3">Minimalist Design</h3>
+              <p class="text-muted">Clean two-column interface — file tree + editor.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="text-center p-4">
+              <i class="bi bi-lightning feature-icon"></i>
+              <h3 class="h5 fw-bold mt-3">Fast &amp; Lightweight</h3>
+              <p class="text-muted">Built with Tauri — small binary, low memory.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="text-center p-4">
+              <i class="bi bi-layout-split feature-icon"></i>
+              <h3 class="h5 fw-bold mt-3">Split Editor</h3>
+              <p class="text-muted">Markdown on one side, live preview on the other.</p>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <div class="text-center p-4">
+              <i class="bi bi-wifi-off feature-icon"></i>
+              <h3 class="h5 fw-bold mt-3">Works Offline</h3>
+              <p class="text-muted">No internet needed. Open and write, anytime.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Wave: white → light -->
+    <div class="wave-divider" style="background:#f6f6f6">
+      <svg viewBox="0 0 1440 100" preserveAspectRatio="none">
+        <path fill="#fff" d="M0,0 C480,100 960,20 1440,60 L1440,0 L0,0 Z"/>
+      </svg>
+    </div>
+
+    <!-- Contribution -->
+    <section id="contribute" style="background:#f6f6f6" class="py-5">
+      <div class="container text-center">
+        <h2 class="display-6 fw-bold mb-3">Contribute to Lumark</h2>
+        <p class="lead text-muted mb-4">Lumark is open source and MIT licensed. We welcome contributions of all kinds.</p>
+        <div class="d-flex justify-content-center gap-3 flex-wrap">
+          <a href="https://github.com/AlbertArakelyan/Lumark/issues/new" class="btn btn-primary btn-lg" target="_blank" rel="noopener">Open an Issue</a>
+          <a href="https://github.com/AlbertArakelyan/Lumark/fork" class="btn btn-outline-primary btn-lg" target="_blank" rel="noopener">Fork &amp; Contribute</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Wave: light → primary -->
+    <div class="wave-divider" style="background:#158cba">
+      <svg viewBox="0 0 1440 100" preserveAspectRatio="none">
+        <path fill="#f6f6f6" d="M0,0 C240,80 720,100 1440,20 L1440,0 L0,0 Z"/>
+      </svg>
+    </div>
+
+    <!-- Donation -->
+    <section id="donate" class="bg-primary text-white py-5">
+      <div class="container text-center">
+        <h2 class="display-6 fw-bold mb-3">Support Lumark</h2>
+        <p class="lead mb-4">If you find Lumark useful, consider sponsoring its development.<br />Your support helps keep the project alive and growing.</p>
+        <a href="https://github.com/sponsors/AlbertArakelyan" class="btn btn-light btn-lg sponsor-btn d-inline-flex align-items-center gap-2" target="_blank" rel="noopener">
+          <i class="bi bi-heart-fill text-danger"></i>
+          Sponsor
+        </a>
+      </div>
+    </section>
+
+    <!-- Wave: primary → dark -->
+    <div class="wave-divider" style="background:#555">
+      <svg viewBox="0 0 1440 100" preserveAspectRatio="none">
+        <path fill="#158cba" d="M0,0 C600,100 900,0 1440,70 L1440,0 L0,0 Z"/>
+      </svg>
+    </div>
+
+    <!-- Footer -->
+    <footer style="background:#555" class="text-white py-4">
+      <div class="container d-flex justify-content-between align-items-center flex-wrap gap-3">
+        <div class="d-flex align-items-center gap-2">
+          <img src="/logo.png" alt="Lumark" width="24" height="24" />
+          <span>&copy; 2026 Lumark. MIT License.</span>
+        </div>
+        <div class="d-flex gap-3 social-links">
+          <a href="https://github.com/AlbertArakelyan/Lumark" target="_blank" rel="noopener" aria-label="GitHub">
+            <svg width="22" height="22"><use href="/icons.svg#github-icon"/></svg>
+          </a>
+          <a href="https://discord.gg/lumark" target="_blank" rel="noopener" aria-label="Discord">
+            <svg width="22" height="22"><use href="/icons.svg#discord-icon"/></svg>
+          </a>
+          <a href="https://bsky.app/profile/lumark" target="_blank" rel="noopener" aria-label="Bluesky">
+            <svg width="22" height="22"><use href="/icons.svg#bluesky-icon"/></svg>
+          </a>
+          <a href="https://x.com/lumark" target="_blank" rel="noopener" aria-label="X">
+            <svg width="22" height="22"><use href="/icons.svg#x-icon"/></svg>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
