@@ -18,6 +18,14 @@ body {
   padding-bottom: 4rem;
 }
 
+.hero-logo-wrap {
+  width: 120px;
+  height: 120px;
+  background: #fff;
+  border-radius: 1.25rem;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+}
+
 #hero .btn svg {
   fill: currentColor;
 }
@@ -56,6 +64,12 @@ body {
   font-size: 1.125rem;
   color: #6c757d;
   max-width: 600px;
+}
+
+.highlight-icon {
+  fill: #158cba;
+  stroke: #158cba;
+  vertical-align: -0.15em;
 }
 
 .highlight-block.align-right {
