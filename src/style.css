@@ -118,11 +118,11 @@ body {
   display: inline-flex;
 }
 
-.social-links svg {
-  fill: #fff;
-  transition: fill 0.2s;
+.social-links a {
+  color: #fff;
+  transition: color 0.2s;
 }
 
-.social-links a:hover svg {
-  fill: var(--primary);
+.social-links a:hover {
+  color: var(--primary);
 }
