@@ -4,7 +4,9 @@
       "Bash(gh repo:*)",
       "WebFetch(domain:github.com)",
       "Bash(yarn add:*)",
-      "Bash(yarn build:*)"
+      "Bash(yarn build:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)"
     ]
   }
 }
