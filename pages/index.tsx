@@ -7,7 +7,7 @@ export default function Home() {
         <title>Lumark — Local-First Markdown Note-Taking App</title>
         <meta name="description" content="A fast, cross-platform, local-first Markdown note-taking app." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.svg" />
       </Head>
       <div>
         <main>
