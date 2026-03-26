@@ -1,4 +1,15 @@
 import Head from "next/head";
+import { Geist, Geist_Mono } from "next/font/google";
+
+const geistSans = Geist({
+  variable: "--font-geist-sans",
+  subsets: ["latin"],
+});
+
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
+  subsets: ["latin"],
+});
 
 export default function Home() {
   return (
@@ -9,7 +20,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.svg" />
       </Head>
-      <div>
+      <div className={`${geistSans.variable} ${geistMono.variable} ${geistSans.className}`}>
         <main>
           {/* <!-- Hero --> */}
     <section id="hero" className="bg-primary text-white">
