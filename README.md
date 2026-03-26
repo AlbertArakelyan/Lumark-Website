@@ -4,14 +4,14 @@ Landing page for [Lumark](https://github.com/AlbertArakelyan/Lumark) — an open
 
 ## Tech Stack
 
-- Vite
+- Next.js
 - Bootstrap (Bootswatch)
-- Vanilla JS
+- TypeScript
 
 ## Development
 
 ```bash
 yarn dev      # Start dev server
 yarn build    # Production build
-yarn preview  # Preview production build
+yarn start    # Start production server
 ```
