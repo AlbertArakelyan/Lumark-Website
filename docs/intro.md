@@ -8,7 +8,11 @@ slug: /intro
 
 Lumark is a fast, cross-platform, local-first Markdown note-taking app. It runs on Windows, macOS and Linux, stores every note as a plain `.md` file on your own disk, and never sends your data anywhere.
 
+<div className="lm-frame">
+
 ![Lumark app demo](/img/lumark-screenshot.gif)
+
+</div>
 
 ## What you get
 

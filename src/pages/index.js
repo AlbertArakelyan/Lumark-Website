@@ -75,7 +75,9 @@ const Hero = () => (
           </Link>
         </div>
         <div className="col col--6">
-          <img className={styles.screenshot} src={useBaseUrl('/img/lumark-screenshot.gif')} alt="Lumark app demo" />
+          <div className="lm-frame">
+            <img src={useBaseUrl('/img/lumark-screenshot.gif')} alt="Lumark app demo" />
+          </div>
         </div>
       </div>
     </div>

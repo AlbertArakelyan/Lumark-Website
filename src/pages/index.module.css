@@ -127,14 +127,6 @@
   color: var(--lm-on-dark);
 }
 
-.screenshot {
-  display: block;
-  width: 100%;
-  height: auto;
-  border: 1px solid rgba(242, 241, 251, 0.12);
-  border-radius: 12px;
-}
-
 /* Highlights */
 .highlights {
   background: var(--lm-surface);
