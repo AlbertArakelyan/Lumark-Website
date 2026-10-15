@@ -1,0 +1,150 @@
+/*
+ * Lumark palette, derived from the logo (navy #202169, indigo #4033ba,
+ * violet #9b7bff, cyan #3aceff) and softened for a calm, flat look.
+ * Every theme-dependent token is defined for both light and dark.
+ */
+
+:root {
+  /* Brand */
+  --lm-ink: #1d1c4f;
+  --lm-ink-soft: #27265f;
+  --lm-primary: #4b45a8;
+  --lm-primary-hover: #403b8f;
+  --lm-accent: #8a76d9;
+  --lm-accent-soft: #ece8fb;
+  --lm-cyan: #4a9fc7;
+  --lm-band: #3f3a96;
+  --lm-on-primary: #ffffff;
+
+  /* Feedback */
+  --lm-success: #3d8f76;
+  --lm-warning: #b58a45;
+  --lm-danger: #b0566a;
+  --lm-info: #4a8fbf;
+
+  /* Neutrals */
+  --lm-surface: #ffffff;
+  --lm-surface-muted: #f5f4fa;
+  --lm-border: #e3e1ef;
+  --lm-text: #24233a;
+  --lm-text-muted: #66657d;
+  --lm-on-dark: #f2f1fb;
+  --lm-on-dark-muted: #b9b6dc;
+
+  /* Infima */
+  --ifm-color-primary: #4b45a8;
+  --ifm-color-primary-dark: #443e97;
+  --ifm-color-primary-darker: #403b8f;
+  --ifm-color-primary-darkest: #353076;
+  --ifm-color-primary-light: #5751b4;
+  --ifm-color-primary-lighter: #5d58b7;
+  --ifm-color-primary-lightest: #716cc0;
+
+  --ifm-color-success: var(--lm-success);
+  --ifm-color-success-dark: #33786a;
+  --ifm-color-success-contrast-background: #e8f3ef;
+  --ifm-color-success-contrast-foreground: #1f4d40;
+  --ifm-color-info: var(--lm-info);
+  --ifm-color-info-dark: #3d77a0;
+  --ifm-color-info-contrast-background: #e9f2f8;
+  --ifm-color-info-contrast-foreground: #213f55;
+  --ifm-color-warning: var(--lm-warning);
+  --ifm-color-warning-dark: #977238;
+  --ifm-color-warning-contrast-background: #f7f0e4;
+  --ifm-color-warning-contrast-foreground: #54401d;
+  --ifm-color-danger: var(--lm-danger);
+  --ifm-color-danger-dark: #934757;
+  --ifm-color-danger-contrast-background: #f7eaed;
+  --ifm-color-danger-contrast-foreground: #57242f;
+  --ifm-color-secondary-contrast-background: var(--lm-accent-soft);
+  --ifm-color-secondary-contrast-foreground: #3b3170;
+  --ifm-color-secondary-dark: var(--lm-accent);
+
+  --ifm-font-family-base: 'Geist', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --ifm-font-family-monospace: 'Geist Mono', ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  --ifm-heading-font-weight: 650;
+  --ifm-font-color-base: var(--lm-text);
+  --ifm-background-color: var(--lm-surface);
+  --ifm-code-font-size: 92%;
+  --ifm-global-shadow-lw: none;
+  --ifm-global-shadow-md: none;
+  --ifm-global-shadow-tl: none;
+  --ifm-navbar-shadow: none;
+  --ifm-button-border-radius: 8px;
+  --ifm-footer-background-color: var(--lm-ink);
+  --docusaurus-highlighted-code-line-bg: rgba(75, 69, 168, 0.1);
+}
+
+[data-theme='dark'] {
+  --lm-ink: #111027;
+  --lm-ink-soft: #1a1938;
+  --lm-primary: #8f88e6;
+  --lm-primary-hover: #a19be9;
+  --lm-accent: #a895f0;
+  --lm-accent-soft: #24213f;
+  --lm-cyan: #6bb8dc;
+  --lm-band: #2a2668;
+  --lm-on-primary: #16152f;
+
+  --lm-success: #6bb59c;
+  --lm-warning: #d1ab6b;
+  --lm-danger: #d17e90;
+  --lm-info: #74aed6;
+
+  --lm-surface: #16152f;
+  --lm-surface-muted: #1c1b3a;
+  --lm-border: #2d2b52;
+  --lm-text: #e6e4f5;
+  --lm-text-muted: #a3a1c0;
+
+  --ifm-color-primary: #8f88e6;
+  --ifm-color-primary-dark: #7d75e1;
+  --ifm-color-primary-darker: #736bde;
+  --ifm-color-primary-darkest: #5a50d6;
+  --ifm-color-primary-light: #a19be9;
+  --ifm-color-primary-lighter: #aaa5ec;
+  --ifm-color-primary-lightest: #c5c1f3;
+
+  --ifm-color-success-contrast-background: #1a2f2b;
+  --ifm-color-success-contrast-foreground: #cfe9df;
+  --ifm-color-info-contrast-background: #1a2838;
+  --ifm-color-info-contrast-foreground: #d3e6f3;
+  --ifm-color-warning-contrast-background: #31291b;
+  --ifm-color-warning-contrast-foreground: #f1e2c6;
+  --ifm-color-danger-contrast-background: #33202a;
+  --ifm-color-danger-contrast-foreground: #f2d4db;
+  --ifm-color-secondary-contrast-foreground: #ddd6fb;
+
+  --ifm-background-color: var(--lm-surface);
+  --ifm-background-surface-color: var(--lm-surface-muted);
+  --ifm-navbar-background-color: var(--lm-surface);
+  --docusaurus-highlighted-code-line-bg: rgba(143, 136, 230, 0.15);
+}
+
+/* Flat design: hairline borders instead of shadows. */
+.navbar {
+  border-bottom: 1px solid var(--lm-border);
+}
+
+.navbar__logo img {
+  border-radius: 6px;
+}
+
+.footer--dark {
+  --ifm-footer-background-color: var(--lm-ink);
+  --ifm-footer-link-color: var(--lm-on-dark-muted);
+  --ifm-footer-title-color: var(--lm-on-dark);
+}
+
+.theme-doc-markdown table {
+  display: table;
+  width: 100%;
+}
+
+kbd {
+  box-shadow: none;
+  border: 1px solid var(--lm-border);
+  border-bottom-width: 2px;
+  background: var(--lm-surface-muted);
+  color: var(--lm-text);
+}

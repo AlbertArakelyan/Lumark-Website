@@ -1,0 +1,70 @@
+---
+title: Where your notes live
+description: The folder on disk where Lumark stores notes, and how to back them up.
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+# Where your notes live
+
+Lumark is local-first: every note is a plain Markdown file in your user's application data directory. Nothing is uploaded anywhere.
+
+## Location
+
+<Tabs groupId="os" queryString>
+  <TabItem value="windows" label="Windows" default>
+
+```text
+%APPDATA%\com.albertarakelyan.lumark\notes\
+```
+
+Paste that path into the File Explorer address bar to open it. It usually expands to `C:\Users\<you>\AppData\Roaming\com.albertarakelyan.lumark\notes\`.
+
+  </TabItem>
+  <TabItem value="macos" label="macOS">
+
+```text
+~/Library/Application Support/com.albertarakelyan.lumark/notes/
+```
+
+In Finder, press <kbd>Cmd</kbd> + <kbd>Shift</kbd> + <kbd>G</kbd> and paste the path.
+
+  </TabItem>
+  <TabItem value="linux" label="Linux">
+
+```text
+~/.local/share/com.albertarakelyan.lumark/notes/
+```
+
+If you've set `XDG_DATA_HOME`, look under `$XDG_DATA_HOME/com.albertarakelyan.lumark/notes/` instead.
+
+  </TabItem>
+</Tabs>
+
+## Layout
+
+Each folder in the app is a directory, and each note is a `.md` file inside it:
+
+```text
+notes/
+├── general/
+│   ├── Shopping list.md
+│   └── Ideas.md
+└── work/
+    └── Meeting notes.md
+```
+
+Other files you may see next to the `notes` directory are created by the app's web engine and can be ignored.
+
+## Backing up
+
+Copy the whole `notes` directory somewhere safe: an external drive, a sync folder, or a Git repository. To restore, quit Lumark and copy the directory back.
+
+:::tip
+Since notes are plain files, any backup or sync tool you already use will work with them.
+:::
+
+## Upgrading from an older version
+
+Older versions of Lumark stored notes directly in the app data directory, or loose in `notes/` without a folder. On startup, Lumark moves any such notes into the **general** folder. If a note with the same name already exists there, the moved copy is renamed (for example `Ideas (2).md`) so nothing is overwritten.
