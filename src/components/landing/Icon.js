@@ -1,3 +1,5 @@
+import { useId } from 'react';
+
 const STROKE_ICONS = {
   shieldLock: (
     <>
@@ -44,6 +46,11 @@ const STROKE_ICONS = {
 };
 
 const FILL_ICONS = {
+  windows: { viewBox: '0 0 24 24', path: 'M3 5.6 10.4 4.6v6.9H3zM11.4 4.45 21 3.1v8.4h-9.6zM3 12.5h7.4v6.9L3 18.4zM11.4 12.5H21v8.4l-9.6-1.35z' },
+  apple: {
+    viewBox: '0 0 24 24',
+    path: 'M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701',
+  },
   sparkle: { viewBox: '0 0 24 24', path: 'M12 2l2.4 7.2L22 12l-7.6 2.8L12 22l-2.4-7.2L2 12l7.6-2.8z' },
   bolt: { viewBox: '0 0 24 24', path: 'M13 2L4 14h7l-1 8 9-12h-7z' },
   github: {
@@ -52,8 +59,39 @@ const FILL_ICONS = {
   },
 };
 
+// Tux: a filled silhouette with the belly and eyes cut out by a mask, so it stays one colour.
+const Tux = ({ size, className }) => {
+  const maskId = `tux-${useId()}`;
+
+  return (
+    <svg className={className} width={size} height={size} viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <mask id={maskId}>
+        <rect width="24" height="24" fill="#fff" />
+        <ellipse cx="12" cy="15.6" rx="3.9" ry="4.9" fill="#000" />
+        <ellipse cx="10.5" cy="6.4" rx="1.15" ry="1.4" fill="#000" />
+        <ellipse cx="13.5" cy="6.4" rx="1.15" ry="1.4" fill="#000" />
+      </mask>
+      <g mask={`url(#${maskId})`}>
+        <circle cx="12" cy="7" r="4.6" />
+        <ellipse cx="12" cy="14.6" rx="6.3" ry="7" />
+        <ellipse cx="5.6" cy="15" rx="1.6" ry="4" transform="rotate(18 5.6 15)" />
+        <ellipse cx="18.4" cy="15" rx="1.6" ry="4" transform="rotate(-18 18.4 15)" />
+      </g>
+      <circle cx="10.75" cy="6.7" r="0.55" />
+      <circle cx="13.25" cy="6.7" r="0.55" />
+      <path d="M10.6 8.6 12 7.9l1.4.7L12 9.9z" />
+      <ellipse cx="8.4" cy="21.6" rx="3" ry="1.3" />
+      <ellipse cx="15.6" cy="21.6" rx="3" ry="1.3" />
+    </svg>
+  );
+};
+
 const Icon = ({ name, size = 24, className }) => {
   const fillIcon = FILL_ICONS[name];
+
+  if (name === 'linux') {
+    return <Tux size={size} className={className} />;
+  }
 
   if (fillIcon) {
     return (

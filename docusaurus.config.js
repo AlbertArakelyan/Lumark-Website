@@ -68,7 +68,7 @@ const config = {
             label: 'Docs',
           },
           {
-            href: `${GITHUB_URL}/releases/latest`,
+            to: '/download',
             label: 'Download',
             position: 'right',
           },

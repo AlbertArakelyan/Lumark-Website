@@ -4,9 +4,8 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 import Layout from '@theme/Layout';
 import Icon from '@site/src/components/landing/Icon';
 import Wave from '@site/src/components/landing/Wave';
+import { GITHUB_URL } from '@site/src/constants/release';
 import styles from './index.module.css';
-
-const GITHUB_URL = 'https://github.com/AlbertArakelyan/Lumark';
 
 const BADGES = [
   { src: 'https://img.shields.io/github/v/release/AlbertArakelyan/lumark?color=4b45a8&style=flat-square', alt: 'Latest release' },
@@ -61,7 +60,7 @@ const Hero = () => (
           </div>
           <p className={styles.heroLead}>A fast, cross-platform, local-first Markdown note-taking app.</p>
           <div className={styles.actions}>
-            <Link className={clsx(styles.btn, styles.btnLight)} href={`${GITHUB_URL}/releases/latest`}>
+            <Link className={clsx(styles.btn, styles.btnLight)} to="/download">
               <Icon name="download" size={18} />
               Download
             </Link>
