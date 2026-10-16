@@ -2,6 +2,7 @@ import clsx from 'clsx';
 import Link from '@docusaurus/Link';
 import Layout from '@theme/Layout';
 import Icon from '@site/src/components/landing/Icon';
+import Tooltip from '@site/src/components/Tooltip';
 import Wave from '@site/src/components/landing/Wave';
 import { DOWNLOADS, LATEST_VERSION, RELEASES_URL } from '@site/src/constants/release';
 import styles from './index.module.css';
@@ -15,7 +16,7 @@ const DownloadCard = ({ download }) => (
     <h2 className={downloadStyles.cardTitle}>{download.os}</h2>
     <div className={downloadStyles.options}>
       {download.options.map((option) => (
-        <div key={option.label} className={downloadStyles.option}>
+        <Tooltip key={option.label} content={option.tooltip} block>
           {option.url ? (
             <Link className={clsx(styles.btn, styles.btnPrimary, downloadStyles.cardButton)} href={option.url}>
               <Icon name="download" size={18} />
@@ -26,8 +27,7 @@ const DownloadCard = ({ download }) => (
               {option.label}
             </button>
           )}
-          {option.hint && <span className={downloadStyles.hint}>{option.hint}</span>}
-        </div>
+        </Tooltip>
       ))}
     </div>
   </div>

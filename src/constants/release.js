@@ -7,6 +7,7 @@ export const RELEASES_URL = `${GITHUB_URL}/releases`;
 const assetUrl = (fileName) => `${RELEASES_URL}/download/v${LATEST_VERSION}/${fileName}`;
 
 // One card per platform, one button per installer. A button without a `url` renders disabled ("coming soon").
+// `tooltip` is optional and shows on hover.
 export const DOWNLOADS = [
   {
     os: 'Windows',
@@ -19,12 +20,12 @@ export const DOWNLOADS = [
     options: [
       {
         label: 'Download for Intel',
-        hint: 'For Macs with an Intel processor',
+        tooltip: 'For Macs with an Intel processor',
         url: assetUrl(`Lumark_${LATEST_VERSION}_x64.dmg`),
       },
       {
         label: 'Download for Apple Silicon (coming soon)',
-        hint: 'For Macs with an M1, M2, M3 or newer chip',
+        tooltip: 'For Macs with an M1, M2, M3 or newer chip',
       },
     ],
   },

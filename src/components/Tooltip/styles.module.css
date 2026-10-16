@@ -1,0 +1,58 @@
+.wrapper {
+  position: relative;
+  display: inline-flex;
+}
+
+.block {
+  display: flex;
+  width: 100%;
+}
+
+/* Disabled elements swallow pointer events in some browsers, so the wrapper takes the hover instead. */
+.wrapper:has(:disabled) {
+  cursor: not-allowed;
+}
+
+.wrapper :disabled {
+  pointer-events: none;
+}
+
+/* Inverted colours: dark on the light theme, light on the dark theme. Flat, no shadow. */
+.tooltip {
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 50%;
+  z-index: 10;
+  width: max-content;
+  max-width: 16rem;
+  padding: 0.4rem 0.7rem;
+  border-radius: 6px;
+  background: var(--lm-text);
+  color: var(--lm-surface);
+  font-size: 0.85rem;
+  font-weight: 500;
+  line-height: 1.4;
+  text-align: center;
+  white-space: normal;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(-50%);
+  transition: opacity 0.15s ease, visibility 0.15s ease;
+  pointer-events: none;
+}
+
+.tooltip::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border: 5px solid transparent;
+  border-top-color: var(--lm-text);
+}
+
+.wrapper:hover .tooltip,
+.wrapper:focus-within .tooltip {
+  opacity: 1;
+  visibility: visible;
+}
