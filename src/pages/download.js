@@ -13,15 +13,23 @@ const DownloadCard = ({ download }) => (
       <Icon name={download.icon} size={40} />
     </div>
     <h2 className={downloadStyles.cardTitle}>{download.os}</h2>
-    <p className={downloadStyles.cardMeta}>
-      {download.format} &middot; {download.arch}
-    </p>
-    <Link className={clsx(styles.btn, styles.btnPrimary, downloadStyles.cardButton)} href={download.url}>
-      <Icon name="download" size={18} />
-      Download
-    </Link>
-    <code className={downloadStyles.fileName}>{download.fileName}</code>
-    {download.note && <span className={downloadStyles.note}>{download.note}</span>}
+    <div className={downloadStyles.options}>
+      {download.options.map((option) => (
+        <div key={option.label} className={downloadStyles.option}>
+          {option.url ? (
+            <Link className={clsx(styles.btn, styles.btnPrimary, downloadStyles.cardButton)} href={option.url}>
+              <Icon name="download" size={18} />
+              {option.label}
+            </Link>
+          ) : (
+            <button type="button" className={clsx(styles.btn, styles.btnPrimary, downloadStyles.cardButton)} disabled>
+              {option.label}
+            </button>
+          )}
+          {option.hint && <span className={downloadStyles.hint}>{option.hint}</span>}
+        </div>
+      ))}
+    </div>
   </div>
 );
 

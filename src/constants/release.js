@@ -4,21 +4,33 @@ export const LATEST_VERSION = '0.9.0';
 export const GITHUB_URL = 'https://github.com/AlbertArakelyan/Lumark';
 export const RELEASES_URL = `${GITHUB_URL}/releases`;
 
-const asset = (fileName) => ({
-  fileName,
-  url: `${RELEASES_URL}/download/v${LATEST_VERSION}/${fileName}`,
-});
+const assetUrl = (fileName) => `${RELEASES_URL}/download/v${LATEST_VERSION}/${fileName}`;
 
-// One entry per installer. Add new ones here (for example an Apple Silicon .dmg or an .AppImage).
+// One card per platform, one button per installer. A button without a `url` renders disabled ("coming soon").
 export const DOWNLOADS = [
-  { os: 'Windows', icon: 'windows', arch: 'x64', format: '.exe installer', ...asset(`Lumark_${LATEST_VERSION}_x64-setup.exe`) },
+  {
+    os: 'Windows',
+    icon: 'windows',
+    options: [{ label: 'Download .exe installer', url: assetUrl(`Lumark_${LATEST_VERSION}_x64-setup.exe`) }],
+  },
   {
     os: 'macOS',
     icon: 'apple',
-    arch: 'Intel x64',
-    format: '.dmg disk image',
-    note: 'Apple Silicon: coming soon',
-    ...asset(`Lumark_${LATEST_VERSION}_x64.dmg`),
+    options: [
+      {
+        label: 'Download for Intel',
+        hint: 'For Macs with an Intel processor',
+        url: assetUrl(`Lumark_${LATEST_VERSION}_x64.dmg`),
+      },
+      {
+        label: 'Download for Apple Silicon (coming soon)',
+        hint: 'For Macs with an M1, M2, M3 or newer chip',
+      },
+    ],
   },
-  { os: 'Linux', icon: 'linux', arch: 'amd64', format: '.deb package', ...asset(`Lumark_${LATEST_VERSION}_amd64.deb`) },
+  {
+    os: 'Linux',
+    icon: 'linux',
+    options: [{ label: 'Download .deb package', url: assetUrl(`Lumark_${LATEST_VERSION}_amd64.deb`) }],
+  },
 ];
